@@ -8,7 +8,7 @@ export const createCache: api.FCreateCache = ($d) => {
         $d: {
             getData: ($: string) => pt.AsyncValue<T>
         }
-    ): api.FGetAsyncData<T> {
+    ): api.FGetAsyncData<string, T> {
 
         const resolved: { [key: string]: T } = {}
         const resolving: {
