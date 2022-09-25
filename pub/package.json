@@ -19,7 +19,7 @@
     "url": "git+https://github.com/corno/res-pareto-async.git"
   },
   "types": "dist/index.d.ts",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "dependencies": {
     "api-pareto-async": "^0.2.0",
     "pareto-core-internals": "^0.7.0"
