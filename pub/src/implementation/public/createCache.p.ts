@@ -22,10 +22,8 @@ export const createCache: api.FCreateCache = ($d) => {
             if (resolvedEntry !== undefined) {
                 return pi.wrapAsyncValueImp(
                     true,
-                    {
-                        _execute: (cb) => {
-                            cb(resolvedEntry)
-                        }
+                    (cb) => {
+                        cb(resolvedEntry)
                     }
                 )
             } else {
@@ -33,10 +31,8 @@ export const createCache: api.FCreateCache = ($d) => {
                 if (entryBeingResolved !== undefined) {
                     return pi.wrapAsyncValueImp(
                         entryBeingResolved._isGuaranteedToReturnAResult,
-                        {
-                            _execute: (cb) => {
-                                entryBeingResolved.callbacks.push(cb)
-                            }
+                        (cb) => {
+                            entryBeingResolved.callbacks.push(cb)
                         }
                     )
                 } else {
@@ -50,17 +46,15 @@ export const createCache: api.FCreateCache = ($d) => {
 
                     return pi.wrapAsyncValueImp(
                         x._isGuaranteedToReturnAResult,
-                        {
-                            _execute: (cb) => {
-                                callbacks.push(cb)
-                                x._execute((v) => {
-                                    callbacks.forEach(($) => {
-                                        $(v)
-                                    })
-                                    resolved[key] = v
-                                    delete resolving[key]
+                        (cb) => {
+                            callbacks.push(cb)
+                            x._execute((v) => {
+                                callbacks.forEach(($) => {
+                                    $(v)
                                 })
-                            }
+                                resolved[key] = v
+                                delete resolving[key]
+                            })
                         }
                     )
                 }

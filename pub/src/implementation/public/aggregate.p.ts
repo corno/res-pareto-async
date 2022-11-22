@@ -15,21 +15,19 @@ export const aggregate: api.FCreateAggregater = ($d) => {
         return ($) => {
             return pi.wrapAsyncValueImp(
                 true,
-                {
-                    _execute: (cb) => {
-                        const temp: PT[] = []
-                        $d.connectToStream(
-                            $,
-                            {
-                                onData: ($) => {
-                                    temp.push($)
-                                },
-                                onEnd: () => {
-                                    cb(pi.wrapRawArray(temp))
-                                }
+                (cb) => {
+                    const temp: PT[] = []
+                    $d.connectToStream(
+                        $,
+                        {
+                            onData: ($) => {
+                                temp.push($)
+                            },
+                            onEnd: () => {
+                                cb(pi.wrapRawArray(temp))
                             }
-                        )
-                    }
+                        }
+                    )
                 }
             )
 

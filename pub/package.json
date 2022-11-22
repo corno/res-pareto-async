@@ -22,7 +22,7 @@
   "version": "0.2.0",
   "dependencies": {
     "api-pareto-async": "^0.2.0",
-    "pareto-core-internals": "^0.7.0"
+    "pareto-core-internals": "^0.9.0"
   },
-  "content-fingerprint": "7879975deb4a09b158809f5d0bbd8558822be72c"
+  "content-fingerprint": "955e2f334ed3cb0a06726a14a080ab60d92b8540"
 }
