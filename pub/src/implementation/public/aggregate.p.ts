@@ -36,3 +36,9 @@ export const aggregate: api.FCreateAggregater = ($d) => {
     }
     return x($d)
 }
+
+aggregate<string, string>({
+    connectToStream: ($, $i) => {
+        $i.onData
+    }
+})
