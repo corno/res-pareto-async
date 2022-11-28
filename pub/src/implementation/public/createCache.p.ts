@@ -1,7 +1,7 @@
 import * as pi from "pareto-core-internals"
 import * as pt from "pareto-core-types"
 
-import * as api from "api-pareto-async"
+import * as api from "../../interface"
 
 export const createCache: api.FCreateCache = ($d) => {
     function x<T>(

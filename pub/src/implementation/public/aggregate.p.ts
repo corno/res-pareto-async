@@ -1,7 +1,7 @@
 import * as pt from "pareto-core-types"
 import * as pi from "pareto-core-internals"
 
-import * as api from "api-pareto-async"
+import * as api from "../../interface"
 
 export const aggregate: api.FCreateAggregater = ($d) => {
     function x<PD, PT>(
@@ -36,9 +36,3 @@ export const aggregate: api.FCreateAggregater = ($d) => {
     }
     return x($d)
 }
-
-aggregate<string, string>({
-    connectToStream: ($, $i) => {
-        $i.onData
-    }
-})
