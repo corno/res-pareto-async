@@ -11,13 +11,22 @@ import { createGetTestset } from "../implementation"
 
 
 pe.runProgram(
-    ($, $i) => {
+    ($) => {
         test.$b.createTestProgram(
             {
                 getTestSet: createGetTestset(
                     data,
                     dependencies
                 ),
+                log: ($) => {
+                    pl.logDebugMessage($)
+                },
+                logError: ($) => {
+                    pl.logDebugMessage($)
+                },
+                onTestErrors: ($) => {
+                    pl.logDebugMessage("TEST ERROR")
+                },
             },
         )(
            $.arguments
