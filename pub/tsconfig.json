@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "noLib": true,
     "target": "ES2015",
     "module": "commonjs",
     "declaration": true,
@@ -11,5 +12,5 @@
   },
   "include": [
     "./src"
-, "src2"  ]
+  ]
 }

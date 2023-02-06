@@ -1,28 +1,19 @@
 {
   "author": "Corno",
-  "bin": {},
-  "files": [
-    "dist",
-    "data"
-  ],
-  "keywords": [],
-  "main": "./dist/index.js",
-  "bugs": {
-    "url": "https://github.com/corno/res-pareto-async/issues"
-  },
-  "description": "async function for pareto",
-  "homepage": "https://github.com/corno/res-pareto-async#readme",
   "license": "ISC",
-  "name": "res-pareto-async",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/corno/res-pareto-async.git"
-  },
-  "types": "dist/index.d.ts",
-  "version": "0.3.2",
+  "description": "asynchronous functions that are not supported by the language itself",
+
   "dependencies": {
-    "pareto-core-internals": "^0.11.0"
+    "pareto-core-lib": "^0.18.1",
+    "pareto-core-raw": "^0.7.4",
+    "pareto-core-state": "^0.12.0"
   },
-  "interface-fingerprint": "a05a091dd63caab4e652ea16120bb929caec05be",
-  "content-fingerprint": "ecff59cc863e5510103b54a4170f41e3aaebc998"
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts"
 }

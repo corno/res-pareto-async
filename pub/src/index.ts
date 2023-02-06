@@ -1,1 +1,2 @@
-export * from "./implementation"
+export { $a } from "./main"
+export * from "./main"
