@@ -1,4 +1,4 @@
-import * as pt from "pareto-core-types"
+import * as pt from 'pareto-core-types'
 
 export type FGetAsyncData<PConfigurationData, PResultData> = (
     $: PConfigurationData,

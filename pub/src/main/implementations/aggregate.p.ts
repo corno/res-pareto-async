@@ -1,5 +1,5 @@
-import * as pt from "pareto-core-types"
-import * as pi from "pareto-core-internals"
+import * as pt from 'pareto-core-types'
+import * as pi from 'pareto-core-internals'
 
 import * as api from "../../interface"
 

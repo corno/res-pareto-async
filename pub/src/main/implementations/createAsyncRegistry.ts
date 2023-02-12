@@ -1,4 +1,4 @@
-// import * as pa from "pareto-core-types"
+// import * as pa from 'pareto-core-types'
 // import { AsyncRegistry } from "../types/AsyncRegistry"
 
 // export function createAsyncRegistry(
