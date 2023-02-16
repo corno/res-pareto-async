@@ -11,7 +11,7 @@ export const $: mproject.T.Project = {
     'description': "asynchronous functions that are not supported by the language itself",
     'license': "ISC",
 
-    'pubdependencies': d({
+    'dependencies': d({
     }),
     'type': ['library', {
         'main': {
@@ -23,6 +23,13 @@ export const $: mproject.T.Project = {
         'test': {
             'dependencies': d({
             }),
+            'glossary': {
+                'functions': d({}),
+                'imports': d({}),
+                'parameters': d({}),
+                'types': d({}),
+                'interfaces': d({}),
+            },
         }
     }],
 }
